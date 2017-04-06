@@ -1,0 +1,98 @@
+<html>
+	<header>
+		<style>
+		h1 {
+		text-align: center;
+		}
+		p {
+		text-align: center;
+		}
+		main {
+		   margin-left:auto;
+		   margin-right:auto;
+           width: 66%;
+           border: 10px solid blue;
+           height: 200px;
+           overflow:scroll;
+           }
+         ul {
+           list-style-type: none;
+           }
+    	aside {
+         width: 66%;
+   		 margin-top: 50px;
+    	 margin-left:auto;
+		 margin-right:auto;
+        }
+		footer {
+            clear: both;
+            position:absolute;
+			bottom:0;
+			left:0;   
+         }
+     	.done {
+         text-decoration:line-through;
+         }
+     	.High {
+         color:green;
+         }
+    	 .Medium {
+         color: blue;
+         }
+    	 .Low {
+         color: red;
+         }
+		</style>
+	</header>
+	
+	
+	
+	
+	<body>
+		<h1> ToDo List</h1>
+		<p>I couldn't get the save function to work</p>
+		<main>
+			<ul id="busylist"></ul>
+		</main>
+		<aside>
+			<label for="newtask">New Task</label>
+			<input type="text" id="newtask" size="36" value="enter task">
+			<button onclick="addTask()">ADD</button>
+		<select id="priority">
+    		<option>High</option>
+    		<option>Medium</option>
+   			<option>Low</option>
+		</select>
+		</aside>
+		
+		
+		
+		<script type="text/javascript">
+		doneTask= function(){
+		if (this.checked){
+			this.parentNode.classList.add("done");
+		} else {
+			this.parentNode.classList.remove("done");
+			}
+		}
+	
+		addTask=function(){
+			i= document.querySelector("#newtask")
+			bl= document.querySelector("#busylist")
+			p= document.querySelector("#priority").value
+			li= document.createElement("li")
+			li.className =p;
+			cb= document.createElement("input")
+			cb.type="checkbox"
+			t=document.createTextNode(i.value)
+			li.appendChild(cb)
+			li.appendChild(t)
+			bl.appendChild(li)
+			cb.onclick=doneTask;
+		}
+		</script>
+		<footer>
+			<p>Copyright 2014 Elijah Kane</p>
+		</footer>	
+	</body>
+</html>

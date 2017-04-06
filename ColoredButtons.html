@@ -1,0 +1,23 @@
+<html>
+   <body>
+      <h1>Colors!</h1>
+       <script  src="color.js" type="text/javascript"></script>
+       <label for="abc"> Red</label>
+       <input id="abc" type="text" min="0" value="255" /> <br>
+       <label for="xyz"> Green</label>
+       <input id="xyz" type="text"  value="255" /> <br>
+       <label for="efg"> Blue</label>
+       <input id="efg" type="text"  value="255" />
+       <br>
+       <button onclick="changeColor();">Change Color</button>
+      <script>
+          changeColor=function(){
+              red = document.querySelector("#abc").value;
+              green = document.querySelector("#xyz").value;
+              blue = document.querySelector("#efg").value;
+              newColor= "rgb("+red+ "," +green+ "," +blue+ ")";
+              document.body.style.backgroundColor = newColor;
+          }
+      </script>
+   </body>
+</html>

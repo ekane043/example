@@ -1,0 +1,39 @@
+<html>
+<head>
+     <style>
+     
+         nav {
+          	 margin-top: 20px;
+             margin-bottom: 0px;
+             border-top: 10px blue;
+             border-bottom: 10px blue;
+         }
+         nav ul{
+         	margin:0px;
+         }
+         nav li {
+            display: inline;
+         }
+          section {
+          float:left;
+           width: 20%;
+           border: 10px solid blue;
+           height: 800px;
+           }
+         aside {
+             float: right;
+             width: 73.72%;
+             height: 800px;
+              border: 10px solid blue;
+            
+         }
+         footer {
+             clear: both;
+         }
+         body {
+             margin: 0px;
+         }
+         
+     </style>
+</head>
+</html>

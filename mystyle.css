@@ -1,0 +1,27 @@
+<html>
+	<head>
+		 .yellow {
+         background-color: yellow;
+      	}
+		.red {
+			background-color:red;
+		}
+		.green {
+			background-color:lightgreen;
+		}
+		li.green {
+    text-decoration: line-through;
+		}
+		 li.yellow:before {
+ 	content: '✔';   
+    margin-left: -1em; margin-right: .100em;
+ 		}
+
+ 		ul {
+   	padding-left:20px;
+   	text-indent:2px;
+   	list-style: none;
+   	list-style-position:outside;
+		}
+	</head>
+</html>
